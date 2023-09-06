@@ -1,0 +1,26 @@
+{% extends "schDetails/Base.html" %}
+{% load static %}
+
+
+{% block head_block %}
+    <title>Delete Student!</title>
+{% endblock %}
+
+
+
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h2>Delete <em class='becareful'>'{{ student.name|upper }}'</em> from students database!</2>
+      <br>
+      <br>
+
+      <form method="post">
+        <input  class='btn btn-danger' type="submit" value="Delete">
+        <a class='btn ' href="{% url 'schDetails:stuDetails' student.id %}">Cancel</a>
+        {% csrf_token %}
+
+      </form>
+  </div>
+
+{% endblock %}

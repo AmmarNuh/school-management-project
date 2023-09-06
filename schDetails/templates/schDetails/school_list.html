@@ -1,0 +1,39 @@
+{% extends "schDetails/Base.html" %}
+{% load static %}
+
+
+{% block head_block %}
+    <title>School List</title>
+{% endblock %}
+
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h2>This is a list of all the schools in the system:</h2>
+    <br>
+    <table  class="buttons">
+      <th> ID</th>
+      <th>School Name</th>
+      <th>School age</th>
+      <th>School School</th>
+      {% comment %} <th>students num</th> {% endcomment %}
+      <th>Details</th>
+    
+      {% for school in school_list%}
+      <tr>  
+        <td>{{school.id}}</td>
+        <td>{{school.name}}</td>
+        <td>{{school.principal}}</td>
+        <td>{{school.location}}</td>
+        {% comment %} <td> {{ count }} '8'</td> {% endcomment %}
+        <td><a   href="{% url 'schDetails:details' school.id%}">Details</a></td>
+      </tr>
+      {%endfor%}
+    </table>
+    <br>
+    <a class='btn btn-primary' href="{% url 'schDetails:create'%}">Create a new school</a>
+    or
+    <a class='btn btn-primary' href="{% url 'schDetails:createstudent' %}">Add a student to a school</a>
+  </div>
+{% endblock %}
+

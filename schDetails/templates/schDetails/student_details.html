@@ -1,0 +1,38 @@
+{% extends "schDetails/Base.html" %}
+{% load static %}
+
+{% block head_block %}
+    <title>Students Details</title>
+{% endblock %}
+
+{% block body_block %}
+
+    <div class="jumbotron">
+        <h2>This is a list of {{ student.name|upper }} informations in the system:</2>
+    
+            <div class="card p-4"> 
+                <div class=" image d-flex flex-column justify-content-center align-items-center"> 
+                    <button class="btn btn-secondary">
+                        <img class="rounded mx-auto d-block" src="{{ student.profile_pic.url }}" style="width: 500%; width: 70%;place-items: center; float: center; margin-right: 100px;"/>
+                    </button> 
+                </div> 
+                <ul>
+                    <li><p> Name: {{ student.name|title }}</p></li>
+                    <li><p> Age: {{ student.age}}</p></li>
+                    <li><p> School: <a href="{% url 'schDetails:details' student.School.id%}">{{ student.School|title }}</a></p></li>
+                </ul>
+            </div> 
+
+        
+
+        <td><a class='btn btn-warning' id='' href="{% url 'schDetails:updatest' student.id%}">Update</a></td>
+        <td><a class='btn btn-danger' href="{% url 'schDetails:deletest' student.id%}">Delete</a></td>  
+    </div>
+
+  <div class="container mt-4 mb-4 p-3 d-flex justify-content-center"> 
+
+
+</div>
+
+
+{% endblock %}

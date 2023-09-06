@@ -1,0 +1,28 @@
+{% extends "schDetails/Base.html" %}
+{% load static %}
+
+
+{% block head_block %}
+    <title>Delete School!</title>
+    <link rel="stylesheet" href="{% static 'css/stylr.css' %}">
+{% endblock %}
+
+
+
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h2>You're deleting <a  href="{% url 'schDetails:details' school.id%}">'{{ school.name|title }}'</a> from schools database !</2>
+      
+      <br>
+      <br>
+
+      <form method="post">
+        <input  class='btn btn-danger' type="submit" value="delete">
+        <a class='btn ' href="{% url 'schDetails:details' school.id%}">Cancel</a>
+        {% csrf_token %}
+
+      </form>
+  </div>
+
+{% endblock %}

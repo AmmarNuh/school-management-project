@@ -1,0 +1,38 @@
+{% extends "schDetails/Base.html" %}
+{% load static %}
+
+
+{% block head_block %}
+    <title>Student List</title>
+{% endblock %}
+
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h2>This is a list of all the student in the system:</h2>
+    <br>
+    <table  class="buttons">
+      <th> ID</th>
+      <th>Student Name</th>
+      <th>Student School</th>
+      <th>Student Detsils</th>
+      <th>Move Student</th>
+      <th>Delete Student</th>
+    
+      {% for student in student_list%}
+      <tr>  
+        <td>{{student.id}}</td>
+        <td>{{student.name|title}}</td>
+        <td>{{student.School|title}}</td>
+        <td><a  href="{% url 'schDetails:stuDetails' student.id%}">Show</a></td>
+        <td><a  href="{% url 'schDetails:updatest' student.id%}">Move</a></td>
+        <td><a  href="{% url 'schDetails:deletest' student.id%}">Delete</a></td>
+      </tr>
+      {%endfor%}
+    </table>
+    <br>
+    <a class='btn btn-primary' href="{% url 'schDetails:createstudent' %}">Add a new student</a>    
+
+    </div>     
+
+{% endblock %}

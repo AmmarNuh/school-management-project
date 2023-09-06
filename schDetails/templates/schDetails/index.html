@@ -1,0 +1,25 @@
+{% extends "schDetails/Base.html" %}
+{% load static %}
+
+
+{% block head_block %}
+    <title>Main Page</title>
+{% endblock %}
+
+
+
+
+{% block body_block %}
+    <div class="jumbotron">
+      <h2>Hello, Welcom to the schools information system.</h2>
+      <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <a class='btn btn-primary'type="button" href="{% url 'schDetails:list'%}" >Show schools List</a>
+        <a class='btn btn-primary'type="button" href="{% url 'schDetails:listst' %}">Show Students List</a>
+        {{st_details.name}}
+        {% for school in school_list%}
+        {{ school.name}}
+        {%endfor%}
+      </div>  
+    </div> 
+{% endblock %}

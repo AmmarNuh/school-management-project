@@ -1,0 +1,23 @@
+{% extends "schDetails/Base.html" %}
+{% load static %}
+
+
+{% block head_block %}
+    <title>Create School</title>
+{% endblock %}
+
+
+{% block body_block %}
+  <div class="jumbotron">
+    
+     <h1>Add a new student:</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary" value="submit">
+            <a class='btn ' href="{% url 'schDetails:listst' %}">Cancel</a>
+        </form>
+
+  </div>
+{% endblock %}

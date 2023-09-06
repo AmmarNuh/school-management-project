@@ -1,0 +1,35 @@
+{% extends "schDetails/Base.html" %}
+{% load static %}
+
+
+{% block head_block %}
+    <title>Create School</title>
+{% endblock %}
+
+
+{% block body_block %}
+  <div class="jumbotron">
+        <form method="post">
+
+          <h1>{% if not form.instance.pk%}Create a new school: </h1>
+          <br>
+          <div class="container">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <input type="submit" class="btn btn-primary" value="submit">
+              <a class='btn ' href="{% url 'schDetails:list' %}">Cancel</a>
+            </div>
+
+            <h1>{% else %}You're updating <a  href="{% url 'schDetails:details' school.id%}">'{{ school.name|title }}'</a> info</h1>
+              <br>
+              <div class="container">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <input type="submit" class="btn btn-primary" value="submit">
+                  <a class='btn ' href="{% url 'schDetails:details' school.id%}">Cancel</a>
+                {% endif %}
+              </div>
+
+        </form>
+  </div>
+{% endblock %}
