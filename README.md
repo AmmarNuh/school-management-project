@@ -31,7 +31,6 @@ To ensure high performance and excellent quality, a set of modern technologies w
 
 A new update for the system will be released soon, including additional features to enhance performance, functionality, and user experience.
 
-The School Management System is the perfect tool for educational administrators and managers to streamline school management, improve efficiency, and organization. Start benefiting from it today!
 
 -----
 # نظام إدارة المدارس
@@ -67,7 +66,6 @@ The School Management System is the perfect tool for educational administrators 
 
 سيتم قريبًا إصدار تحديث جديد للنظام يتضمن ميزات إضافية لتعزيز الأداء والوظائف وتحسين تجربة المستخدم.
 
-نظام إدارة المدارس هو الأداة المثالية للمسؤولين التعليميين والمدراء لتبسيط إدارة المدارس وتحسين الكفاءة والتنظيم. ابدأ الاستفادة منه اليوم!
 
 ---
 
