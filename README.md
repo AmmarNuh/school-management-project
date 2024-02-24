@@ -2,6 +2,10 @@
 
 The School Management System is a website and application that allows you to efficiently manage school affairs in your city or province. This system is a powerful tool for organizing and monitoring comprehensive information related to schools and students. It has been developed using a set of modern technologies to ensure smooth performance and a user-friendly experience.
 
+
+https://github.com/AmmarNuh/school-management-project/assets/135957269/c69c5859-eb0b-4219-8894-d1a89dbded98
+
+
 ## Key Features
 
 ### School Management
